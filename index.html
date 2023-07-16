@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="title-container">
+    <h1 id="gametitle">Etch-a-Sketch</h1>
+  </div>
+  <div class="container" id="menu">
+     <button class="featurebutton" id="resetbutton" onclick="resetGrid()">Reset</button>
+      <button class="featurebutton" id="blackbutton" data-color="black">Black</button>
+      <button class="featurebutton" id="rainbowbutton" data-color="rainbow">Rainbow</button>
+      <button class="featurebutton" id="opaquebutton" data-color="opaque">Opaque</button>
+      <button class="featurebutton" id="selectbutton">Pick: <input type="color" value="#000000" id="input-color"></button>
+      <button class="featurebutton" id="eraserbutton" data-color="eraser">Eraser</button>
+  </div>
+  <div class="container" id="main">
+  </div>
+    <script src="index.js"></script>
+</body>
+</html>
