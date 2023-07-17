@@ -12,7 +12,7 @@ function newGrid(numberCells) {
     // Calculate cell height to fill board
     let cellHeight = 40/numberCells + "rem";
     // Select the main container div and store in variable
-    const mainContainerDiv = document.getElementById("maincontainer");
+    const mainDiv = document.getElementById("main");
     // Instantiate array
     let divArray = [];
     // Iterate through for loop creating 16 divs
@@ -20,7 +20,7 @@ function newGrid(numberCells) {
         // For each div created, loop through and create 16 nested divs
         divArray[i] = document.createElement("div");
         // Add the new element with the text content to the DOM
-        mainContainerDiv.appendChild(divArray[i]);
+        mainDiv.appendChild(divArray[i]);
         // Iterate through for loop creating 16 divs
         for (j = 0; j < numberCells; j++) {
             // Create a new div
@@ -65,9 +65,9 @@ function resetGrid() {
         return;
     }
     // Select the main container div and store in variable
-    const mainContainerDiv = document.getElementById("maincontainer");
+    const mainDiv = document.getElementById("main");
     // Delete all divs from the main container
-    while (mainContainerDiv.firstChild) mainContainerDiv.removeChild( mainContainerDiv.firstChild);
+    while (mainDiv.firstChild) mainDiv.removeChild( mainDiv.firstChild);
     // Trigger another function to amend the grid, passing in the number of cells
     newGrid(numberCells);
 }
